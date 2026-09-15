@@ -18,7 +18,7 @@ Contém: Produção textual, requisitos, fluxogramas, pseudocódigos e planejame
 
 
 #### 2. Fluxograma Detalhado (Cadastro de Restrição e Acompanhamento)
-![Fluxograma Detalhado](./documentacao/fluxograma-detalhado.png)
+Fluxograma Detalhado.
 
 ### ✅ Funcionalidades do Sistema Planejado
 - Cadastro de Aluno
