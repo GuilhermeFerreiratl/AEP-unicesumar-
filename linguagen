@@ -1,1 +1,110 @@
-o
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+
+#define MAX 100
+#define ARQUIVO "alunos_pse.dat"
+
+typedef struct {
+    int id;
+    char nome[50];
+    int idade;
+    char escola[50];
+    char restricao[100]; // alergia, intolerancia, seletividade
+    int temTEA; // 1=Sim 0=Nao
+    int precisaAcomp; // 1=Sim 0=Nao
+    int temAcomp; // 1=Sim 0=Nao
+} Aluno;
+
+Aluno alunos[MAX];
+int total = 0;
+
+void salvar() {
+    FILE *f = fopen(ARQUIVO, "wb");
+    if (f) {
+        fwrite(&total, sizeof(int), 1, f);
+        fwrite(alunos, sizeof(Aluno), total, f);
+        fclose(f);
+    }
+}
+
+void carregar() {
+    FILE *f = fopen(ARQUIVO, "rb");
+    if (f) {
+        fread(&total, sizeof(int), 1, f);
+        fread(alunos, sizeof(Aluno), total, f);
+        fclose(f);
+    }
+}
+
+void limparBuffer() {
+    int c; while ((c = getchar())!= '\n' && c!= EOF);
+}
+
+void cadastrar() {
+    if (total >= MAX) { printf("Limite atingido!\n"); return; }
+    Aluno a;
+    a.id = total + 1;
+    printf("\n--- CADASTRAR ALUNO PSE ---\n");
+    printf("Nome: "); limparBuffer(); fgets(a.nome, 50, stdin); a.nome[strcspn(a.nome, "\n")] = 0;
+    printf("Idade: "); scanf("%d", &a.idade); limparBuffer();
+    printf("Escola: "); fgets(a.escola, 50, stdin); a.escola[strcspn(a.escola, "\n")] = 0;
+    printf("Restricao alimentar (ou 'Nenhuma'): "); fgets(a.restricao, 100, stdin); a.restricao[strcspn(a.restricao, "\n")] = 0;
+    printf("Tem TEA? (1-Sim 0-Nao): "); scanf("%d", &a.temTEA);
+    printf("Precisa de acompanhamento? (1-Sim 0-Nao): "); scanf("%d", &a.precisaAcomp);
+    printf("Tem acompanhamento? (1-Sim 0-Nao): "); scanf("%d", &a.temAcomp);
+
+    alunos[total++] = a;
+    salvar();
+    printf("Aluno cadastrado com ID %d!\n", a.id);
+}
+
+void listar() {
+    printf("\n===== RELATORIO GERAL PSE =====\n");
+    for (int i = 0; i < total; i++) {
+        Aluno a = alunos[i];
+        printf("ID:%d | %s (%d anos) | Escola:%s\n", a.id, a.nome, a.idade, a.escola);
+        printf(" Restricao: %s | TEA:%s | Precisa Acomp:%s | Tem Acomp:%s\n",
+            a.restricao, a.temTEA?"SIM":"NAO",
+            a.precisaAcomp?"SIM":"NAO", a.temAcomp?"SIM":"NAO");
+        printf("----------------------------------------\n");
+    }
+    if (total == 0) printf("Nenhum aluno cadastrado.\n");
+}
+
+void relatorioCantina() {
+    printf("\n===== RELATORIO CANTINA (Restricoes) =====\n");
+    for (int i = 0; i < total; i++) {
+        if (strcmp(alunos[i].restricao, "Nenhuma")!= 0 && strcmp(alunos[i].restricao, "nenhuma")!= 0) {
+            printf("%s - %s: %s\n", alunos[i].escola, alunos[i].nome, alunos[i].restricao);
+        }
+    }
+}
+
+void relatorioAcompanhamento() {
+    printf("\n===== ALUNOS QUE PRECISAM MAS NAO TEM ACOMPANHANTE =====\n");
+    int cont = 0;
+    for (int i = 0; i < total; i++) {
+        if (alunos[i].precisaAcomp == 1 && alunos[i].temAcomp == 0) {
+            printf("ID:%d %s - %s (TEA:%s)\n", alunos[i].id, alunos[i].nome, alunos[i].escola, alunos[i].temTEA?"SIM":"NAO");
+            cont++;
+        }
+    }
+    printf("Total em espera: %d\n", cont);
+}
+
+void buscar() {
+    char nome[50];
+    printf("Buscar nome: "); limparBuffer(); fgets(nome, 50, stdin); nome[strcspn(nome, "\n")] = 0;
+    for (int i = 0; i < total; i++) {
+        if (strstr(alunos[i].nome, nome)) {
+            printf("ID:%d %s | Restricao:%s | TEA:%s\n", alunos[i].id, alunos[i].nome, alunos[i].restricao, alunos[i].temTEA?"SIM":"NAO");
+        }
+    }
+}
+
+int main() {
+    carregar();
+    int op;
+    do {
+        printf("\
