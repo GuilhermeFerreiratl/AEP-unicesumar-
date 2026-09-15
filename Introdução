@@ -1,1 +1,42 @@
-oi
+PRODUÇÃO TEXTUAL - METEP
+1.1 Contextualização sobre o Programa Saúde na Escola
+O Programa Saúde na Escola (PSE) foi instituído pelo Decreto nº 6.286 de 2007, como resultado de uma parceria entre o Ministério da Saúde e o Ministério da Educação, com a finalidade de promover a integração e articulação permanente entre as políticas de educação e saúde (BRASIL, 2007). A proposta central é contribuir para a formação integral dos estudantes por meio de ações de promoção, prevenção e atenção à saúde.
+
+Segundo o Ministério da Saúde (2022), o PSE é uma estratégia fundamental para o fortalecimento da Atenção Primária e possui como diretrizes a intersetorialidade, territorialidade e integralidade. O programa organiza suas ações em 12 eixos temáticos, entre eles a promoção da alimentação saudável e a prevenção de agravos relacionados à alimentação.
+
+A alimentação escolar é um fator crítico, especialmente quando se trata de crianças com Transtorno do Espectro Autista (TEA). Estudos apontam que cerca de 70% das crianças com TEA apresentam seletividade alimentar, recusa a texturas, cores e cheiros, o que impacta diretamente seu estado nutricional e comportamento em sala de aula (ESPOSITO et al., 2023).
+
+A Lei nº 12.764/2012 (Lei Berenice Piana) garante o direito ao acompanhamento especializado em sala de aula, enquanto a Lei nº 11.947/2009 (PNAE) assegura a oferta de alimentação escolar adequada para estudantes que necessitam de atenção nutricional individualizada por condição de saúde. No entanto, na prática, as escolas públicas ainda carecem de instrumentos para registrar e gerenciar essas informações de forma segura e compartilhada entre saúde e educação.
+
+Dessa forma, o PSE torna-se o elo ideal para a implantação de um sistema informatizado que registre restrições alimentares, laudos de TEA e a necessidade de acompanhamento profissional, garantindo a segurança alimentar e a inclusão efetiva.
+
+1.2 Definição do Problema / Questão Norteadora
+Como a ausência de um sistema integrado para controle de restrições alimentares e acompanhamento de crianças com autismo compromete a segurança e a inclusão no âmbito do Programa Saúde na Escola? Como garantir que informações sobre dieta e necessidade de acompanhante cheguem corretamente da família à cantina, professores e equipe de saúde?
+
+1.3 Objetivos
+Objetivo Geral:
+Desenvolver a análise e planejamento de um sistema de informação para gerenciamento de restrições alimentares e acompanhamento de crianças com autismo nas escolas vinculadas ao PSE.
+
+Objetivos Específicos:
+
+Mapear as necessidades de registro de restrições alimentares (alergias, intolerâncias, seletividade do TEA) e de acompanhamento profissional.
+
+Modelar o fluxo de informação entre responsáveis, secretaria escolar, cantina e equipe de saúde do PSE.
+
+Definir os requisitos funcionais e não funcionais para um sistema seguro, com controle de acesso por perfil e relatórios para tomada de decisão.
+
+1.4 Justificativa
+Justificativa Acadêmica: O projeto aplica conceitos de Engenharia de Software, Banco de Dados e Algoritmos para resolver um problema real e interdisciplinar, envolvendo saúde e educação. Permite ao grupo exercitar levantamento de requisitos, modelagem de fluxos e pensamento computacional.
+
+Justificativa Social: A falta de controle pode levar a reações anafiláticas por alergia alimentar e a crises sensoriais em crianças com TEA. O sistema garante o direito à alimentação segura previsto no PNAE (Lei nº 11.947/2009) e à inclusão prevista na Lei Berenice Piana (Lei nº 12.764/2012), reduzindo riscos, evitando desperdício de merenda adaptada e dando mais segurança aos pais. A identificação rápida de quem "Precisa de acompanhamento? Sim/Não" e "Tem acompanhamento? Sim/Não" permite à gestão municipal alocar cuidadores onde há maior demanda.
+
+1.5 Referências
+BRASIL. Decreto nº 6.286, de 5 de dezembro de 2007. Institui o Programa Saúde na Escola - PSE. Brasília, 2007.
+
+BRASIL. Lei nº 11.947, de 16 de junho de 2009. Dispõe sobre o atendimento da alimentação escolar aos alunos da educação básica no âmbito do PNAE. Brasília, 2009.
+
+BRASIL. Lei nº 12.764, de 27 de dezembro de 2012. Institui a Política Nacional de Proteção dos Direitos da Pessoa com Transtorno do Espectro Autista. Brasília, 2012.
+
+BRASIL. Ministério da Saúde. Programa Saúde na Escola: manual instrutivo. Brasília: Ministério da Saúde, 2022.
+
+ESPOSITO, M. et al. Food selectivity in children with autism: guidelines for assessment and clinical interventions. International Journal of Environmental Research and Public Health, v. 20, 2023.
