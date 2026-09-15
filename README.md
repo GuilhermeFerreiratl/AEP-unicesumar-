@@ -3,10 +3,10 @@
 **Tema:** Controle de Restrição Alimentar e Acompanhamento de Crianças com Autismo
 
 ### 👥 Integrantes
-- Nome 1 - RA: 
-- Nome 2 - RA: 
-- Nome 3 - RA: 
-- Nome 4 - RA: 
+-Guilherme Moraes Ferreira - RA:26011382-2 
+-Gabriel ibaniz Volpato- RA:26011647-2 
+-Bruno de Souza Garcia- RA:26010743-2 
+
 
 ### 📄 Entregável Principal - Documento da 1ª Etapa
 Contém: Produção textual, requisitos, fluxogramas, pseudocódigos e planejamento de sprints.
